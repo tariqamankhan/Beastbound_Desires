@@ -1,5 +1,8 @@
-# Ren'Py generated directories
-/game/cache/
-/game/saves/
+cache/
+saves/
 *.rpyc
-*.rpyb
+*.rpa
+*.pyc
+*.pyo
+__pycache__/
+.DS_Store
