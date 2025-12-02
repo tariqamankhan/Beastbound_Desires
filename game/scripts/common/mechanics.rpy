@@ -4,6 +4,8 @@ init python:
         backgrounds = {
             "forest": "backgrounds/moonwood_forest_bg.png",
             "mountain": "backgrounds/mount_infernus_bg.png",
+            "cove": "backgrounds/placeholder_bg.png",
+            "bastion": "backgrounds/placeholder_bg.png",
         }
         bg = backgrounds.get(location_key, "backgrounds/placeholder_bg.png")
         renpy.show("scene_bg", what=Image(bg))

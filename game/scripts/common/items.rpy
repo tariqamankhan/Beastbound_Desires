@@ -5,6 +5,8 @@ init python:
         inventory = {
             "werewolf_essence": False,
             "infernus_coal": False,
+            "siren_shell": False,
+            "clockwork_core": False,
         }
 
     def add_item(item_key):

@@ -2,7 +2,12 @@
 # Skeleton chapter loader and global variables
 
 # Declare persistent or default variables
-default persistent.chapter_unlocked = {"chapter1": True, "chapter2": False}
+default persistent.chapter_unlocked = {
+    "chapter1": True,
+    "chapter2": False,
+    "chapter3": False,
+    "chapter4": False,
+}
 default edge_meter = 0
 default intensity_setting = "mild"
 default inventory = {}
@@ -27,11 +32,26 @@ label chapter_select:
             jump chapter1
         "Mount Infernus (Chapter 2)" if persistent.chapter_unlocked.get("chapter2", False):
             jump chapter2
+        "Siren's Cove (Chapter 3)" if persistent.chapter_unlocked.get("chapter3", False):
+            jump chapter3
+        "Clockwork Bastion (Chapter 4)" if persistent.chapter_unlocked.get("chapter4", False):
+            jump chapter4
         "Exit":
             return
 
 label after_chapter1:
     $ persistent.chapter_unlocked["chapter2"] = True
+    jump chapter_select
+
+label after_chapter2:
+    $ persistent.chapter_unlocked["chapter3"] = True
+    jump chapter_select
+
+label after_chapter3:
+    $ persistent.chapter_unlocked["chapter4"] = True
+    jump chapter_select
+
+label after_chapter4:
     jump chapter_select
 
 # Simple main menu placeholder until Ren'Py default menu is customized
