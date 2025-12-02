@@ -20,7 +20,7 @@ label splashscreen:
     n "This game contains adult themes, fantastical monsters, and heavy teasing. Proceed with awareness."
     return
 
-label start:
+label start_game:
     call screen main_menu_stub
     jump chapter_select
 
