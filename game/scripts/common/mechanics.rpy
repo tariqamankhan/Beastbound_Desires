@@ -17,31 +17,31 @@ init python:
 
     def tease_phase(location, description):
         set_location_background(location)
-        n description
-        $ update_edge_meter(5)
+        renpy.say(n, description)
+        update_edge_meter(5)
 
     def tempt_phase(opponent, description):
-        n "Temptation rises as [opponent] closes in."
-        n description
-        $ update_edge_meter(10)
+        renpy.say(n, "Temptation rises as [opponent] closes in.")
+        renpy.say(n, description)
+        update_edge_meter(10)
 
     def torment_phase(opponent, description):
-        n "Torment tests resolve against [opponent]."
-        n description
-        $ update_edge_meter(15)
+        renpy.say(n, "Torment tests resolve against [opponent].")
+        renpy.say(n, description)
+        update_edge_meter(15)
 
     def release_phase(gif_name="ui/placeholder_release.gif", duration=2.0):
-        $ n("Release washes over Elara in a whirlwind of sensations.")
-        show expression gif_name at center
-        pause duration
-        hide expression gif_name
-        $ update_edge_meter(-20)
+        renpy.say(n, "Release washes over Elara in a whirlwind of sensations.")
+        renpy.show(gif_name)
+        renpy.pause(duration)
+        renpy.hide(gif_name)
+        update_edge_meter(-20)
 
     def relapse_phase(description):
-        n description
-        $ update_edge_meter(5)
+        renpy.say(n, description)
+        update_edge_meter(5)
 
     def trigger_gif(gif_name, duration=5.0):
-        show expression gif_name at center
-        pause duration
-        hide expression gif_name
+        renpy.show(gif_name)
+        renpy.pause(duration)
+        renpy.hide(gif_name)
