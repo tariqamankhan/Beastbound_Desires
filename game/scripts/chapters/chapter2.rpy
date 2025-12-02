@@ -1,5 +1,6 @@
 # Mount Infernus - Chapter 2 skeleton
 label chapter2:
+    $ edge_meter = 0
     scene expression "backgrounds/mount_infernus_bg.png"
     n "Heat from Mount Infernus rolls over Elara like a living tide."
 
@@ -24,4 +25,4 @@ label chapter2:
             n "A hidden cavern offers respite."
 
     call calculate_ending
-    return
+    jump after_chapter2
