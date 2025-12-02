@@ -1,0 +1,5 @@
+# Ren'Py generated directories
+/game/cache/
+/game/saves/
+*.rpyc
+*.rpyb
